@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorRosa"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="8sp"
+        android:fontFamily="sans-serif"
+        android:text="@string/iniciar_sesi_n"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorFondo" />
+
+    <FrameLayout
+        android:background="@drawable/bg_cardview_log"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="24dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/ingresa_tu_contrase_a"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="20sp"
+                app:cardCornerRadius="40sp"
+                app:cardElevation="15sp">
+
+                <ImageView
+                    android:id="@+id/imgView"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:contentDescription="TODO"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/amm_user" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvSaludo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/buenos_d_as"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:layout_marginBottom="10sp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="Abraham Montes"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/contrase_a"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/root_otp_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:weightSum="6">
+
+                <EditText
+                    android:id="@+id/otp_edit_box1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/otp_edit_box2"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/otp_edit_box3"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/otp_edit_box4"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/otp_edit_box5"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/otp_edit_box6"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textSize="30sp" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnLogIn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:text="@string/iniciar_sesi_n"
+                android:textAllCaps="false" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnForgetUser"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:text="@string/olvidar_usuario"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="1sp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:background="#A8A8A8" />
+
+                    <Button
+                        android:id="@+id/btnForgetPass"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center|end"
+                        android:text="@string/olvid_mi_contrase_a"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

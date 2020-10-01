@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.43" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorRosa"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_circular_transparent"
+            android:padding="5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/abc_vector_test" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="-40sp"
+            app:cardCornerRadius="40sp"
+            app:cardElevation="25sp">
+
+            <ImageView
+                android:id="@+id/imgView"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/amm_user" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="10sp"
+            app:cardElevation="10sp"
+            app:contentPaddingBottom="15sp"
+            app:contentPaddingLeft="10sp"
+            app:contentPaddingRight="10sp"
+            app:contentPaddingTop="60sp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center|start"
+                        android:text="Abraham Montes"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="1sp"
+                        android:layout_height="match_parent"
+                        android:background="#A8A8A8" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center|end"
+                        android:text="7291261805"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lyAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:hint="Monto a enviar"
+                        app:endIconDrawable="@drawable/ic_round_monetization_on_24"
+                        app:endIconMode="custom"
+                        app:endIconTint="#62E402">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:height="40sp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lyCost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:hint="Costo">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtCost"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:height="40sp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lyTotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:hint="Total">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtTotal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:height="40sp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lyMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:hint="Mensaje (opcional)">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtMessage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:height="70sp"
+                            android:gravity="start|top"
+                            android:imeOptions="actionDone"
+                            android:inputType="textMultiLine|textCapSentences"
+                            android:maxLines="3"
+                            android:singleLine="false"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnConfirm"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="110sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="80sp"
+                    android:text="Confirmar"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</FrameLayout>
